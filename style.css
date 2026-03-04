@@ -1,0 +1,70 @@
+:root {
+    --cake-pink: #ff4d8d;
+    --cake-yellow: #fffdf2;
+    --text-brown: #4a3728;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: var(--cake-yellow); color: var(--text-brown); scroll-behavior: smooth; }
+
+/* --- PROFESSIONAL HEADER --- */
+header {
+    background: white;
+    padding: 10px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { height: 65px; width: 65px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cake-pink); }
+
+/* Horizontal Menu FIX */
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav ul li a { text-decoration: none; color: var(--text-brown); font-weight: 600; font-size: 1rem; transition: 0.3s; }
+nav ul li a:hover { color: var(--cake-pink); }
+
+/* --- FLOATING CART --- */
+#cart-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--cake-pink);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(255, 77, 141, 0.4);
+    z-index: 9999;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- PRODUCT CARDS --- */
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 50px 8%; }
+.menu-card {
+    background: white;
+    padding: 20px;
+    border-radius: 35px;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+}
+.menu-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+.menu-card img { width: 100%; height: 230px; object-fit: cover; border-radius: 25px; margin-bottom: 15px; }
+
+/* --- BUTTONS --- */
+.cart-controls { display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 15px; }
+.qty-btn { width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid var(--cake-pink); background: transparent; color: var(--cake-pink); cursor: pointer; font-weight: bold; }
+.add-btn { background: var(--cake-pink); color: white; border: none; padding: 10px 25px; border-radius: 50px; font-weight: 600; cursor: pointer; transition: 0.3s; }
+
+/* --- REVIEWS --- */
+.review-box { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px 0; }
+.review-item { background: #fff8fa; padding: 25px; border-radius: 20px; width: 350px; border-left: 5px solid var(--cake-pink); }
